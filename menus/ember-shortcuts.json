@@ -7,8 +7,16 @@
           "label": "Ember Shortcuts",
           "submenu": [
             {
-              "label": "Navigate to Template",
-              "command": "ember-shortcuts:open-template"
+              "label": "Navigate to Component",
+              "command": "ember-shortcuts:open-component"
+            },
+            {
+              "label": "Toggle Javascript / Handlebars",
+              "command": "ember-shortcuts:toggle-between-javascript-and-hbs"
+            },
+            {
+              "label": "Toggle Controller / Route",
+              "command": "ember-shortcuts:toggle-between-controller-and-route"
             }
           ]
         }
