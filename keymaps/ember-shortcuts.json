@@ -1,8 +1,7 @@
 {
   "atom-workspace": {
-    "ctrl-alt-w": "ember-shortcuts:open-template",
-    "ctrl-alt-e": "ember-shortcuts:open-javascript",
     "ctrl-alt-enter": "ember-shortcuts:open-component",
-    "ctrl-alt-r": "ember-shortcuts:toggle-between-controller-route"
+    "ctrl-alt-e": "ember-shortcuts:toggle-between-javascript-and-hbs",
+    "ctrl-alt-r": "ember-shortcuts:toggle-between-controller-and-route"
   }
 }
