@@ -1,0 +1,22 @@
+{
+  "name": "ember-shortcuts",
+  "main": "./lib/ember-shortcuts",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "repository": "https://github.com/Oreoz/atom-ember-shortcuts",
+  "license": "MIT",
+
+  "keywords": [
+    "ember",
+    "ember-cli",
+    "shortcuts",
+    "productivity"
+  ],
+
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+
+  "dependencies": {
+  }
+}
