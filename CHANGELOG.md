@@ -10,3 +10,7 @@
 
 :bug:
 * BUGFIX: Opening components that are deeper than one level inside the file hierarchy is now working
+
+## 1.2.0 - Generated Test Support
+:tada:
+* NEW: Shortcut for entering the generated test of the current Ember file
