@@ -10,6 +10,7 @@ own and maintain the smaller feature set.
 | :--                                                 | :--                                                        |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd>     | Toggles between javascript and handlebars files for components and controllers. |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>     | Toggles between the controller and route. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | Jumps to the generated test file for the current file. |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Enter</kbd> | Jumps into the first component detected on the active row of your editor. |
 
 ## Contributions
