@@ -1,4 +1,6 @@
-# Ember Shortcuts :computer: :tada:
+# Ember Shortcuts
+
+[![Version!](https://img.shields.io/apm/v/ember-shortcuts.svg?style=flat-square)](https://atom.io/packages/ember-shortcuts)
 
 ## Description
 This Atom package is based on the [Ember CLI Helper](https://github.com/apprentus/atom-ember-cli-helper) Atom package,
