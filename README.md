@@ -5,6 +5,9 @@ This Atom package is based on the [Ember CLI Helper](https://github.com/apprentu
 which is sadly no longer maintained. I only used the shortcuts available in that package so I decided to create my
 own and maintain the smaller feature set.
 
+## Installation
+If you have the Atom Package Manager installed, simply run `apm install ember-shortcuts`.
+
 ## Available Keyboard Shortcuts
 | Keybinding                                          | Action                                                     |
 | :--                                                 | :--                                                        |
