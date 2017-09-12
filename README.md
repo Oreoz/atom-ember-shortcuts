@@ -15,7 +15,7 @@ If you have the Atom Package Manager installed, simply run `apm install ember-sh
 | :--                                                 | :--                                                                       |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd>     | Toggles between JavaScript and Handlebars files.                          |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>     | Toggles between the controller and route.                                 |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Enter</kbd> | Jumps into the first component detected on the active row of your editor. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>ENTER</kbd> | Jumps into the first component detected on the active row of your editor. |
 
 ## Detailed Behavior
 | Current Location | Shortcut                                            | Destination        |
