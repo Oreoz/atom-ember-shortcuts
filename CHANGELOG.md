@@ -15,3 +15,8 @@
 :tada:
 * NEW: Adds a new behavior to the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> hotkey in order
 for it to open the route from the template
+
+## 1.1.2 - Contextual Components
+:tada:
+* NEW: The shortcut for entering a component's template is now usable for entering contextual
+components via either the opening or closing declaration
