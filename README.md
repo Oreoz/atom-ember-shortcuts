@@ -1,4 +1,4 @@
-# Ember Shortcuts :computer: :tada:
+# Atom Ember Shortcuts
 
 ## Description
 This Atom package is based on the [Ember CLI Helper](https://github.com/apprentus/atom-ember-cli-helper) Atom package,
