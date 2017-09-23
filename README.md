@@ -29,6 +29,12 @@ If you have the Atom Package Manager installed, simply run `apm install ember-sh
 | my-route.js      | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd>     | my-controller.hbs  |
 | my-template.hbs  | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>ENTER</kbd> | my-component.hbs * |
 | my-component.hbs | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>ENTER</kbd> | my-component.hbs * |
+| my-component.js  | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-component-test.js |
+| my-controller.js | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-controller-test.js |
+| my-route.js      | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-route-test.js |
+| my-model.js      | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-model-test.js |
+| my-helper.js     | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-helper-test.js |
+| my-service.js    | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>     | my-service-test.js |
 
 _\* Your active editor row must be positioned on my-component's declaration._
 
