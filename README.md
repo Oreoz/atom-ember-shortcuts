@@ -1,4 +1,4 @@
-# Ember Shortcuts
+# Atom Ember Shortcuts
 
 [![Version!](https://img.shields.io/apm/v/ember-shortcuts.svg?style=flat-square)](https://atom.io/packages/ember-shortcuts)
 
