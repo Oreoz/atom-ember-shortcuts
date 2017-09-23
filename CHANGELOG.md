@@ -20,3 +20,7 @@ for it to open the route from the template
 :tada:
 * NEW: The shortcut for entering a component's template is now usable for entering contextual
 components via either the opening or closing declaration
+
+## 1.2.0 - Generated Test Support
+:tada:
+* NEW: Shortcut for entering the generated test of the current Ember file
