@@ -24,3 +24,7 @@ components via either the opening or closing declaration
 ## 1.2.0 - Generated Test Support
 :tada:
 * NEW: Shortcut for entering the generated test of the current Ember file
+
+## 1.2.1 - Complex Components
+:wrench:
+* TWEAK: Components that are placed in custom folders within the `app/components` directory can now be navigated to using the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>ENTER</kbd> hotkey.

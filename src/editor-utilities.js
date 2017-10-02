@@ -16,7 +16,7 @@ let editorUtilities = {
 
   firstHandlebarsComponentInLine() {
     let line = editorUtilities._getActiveTextEditorLine();
-    let matches = /{{[#\/]?([a-z]+(-[a-z]+)+)/.exec(line);
+    let matches = /{{[#\/]?([a-z-\/]+)/.exec(line);
     return matches ? matches[1] : '';
   }
 
