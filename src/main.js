@@ -14,6 +14,8 @@ export default {
   subscriptions: null,
 
   activate(state) {
+    require('atom-package-deps').install('ember-shortcuts');
+
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();
 
