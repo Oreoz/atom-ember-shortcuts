@@ -48,6 +48,24 @@ export default {
 
   toggleControllerRoute() {
     toggleBetweenControllerAndRoute();
+  },
+
+  provideIntentions() {
+    return {
+      grammarScopes: ['source.js', 'text.html.handlebars'],
+      getIntentions({ textEditor, bufferPosition }) {
+        return [
+          {
+            priority: 100,
+            icon: 'zap',
+            title: 'Fix linter issue',
+            selected() {
+              console.log('You chose to fix linter issue')
+            }
+          }
+        ]
+      }
+    }
   }
 
 };
