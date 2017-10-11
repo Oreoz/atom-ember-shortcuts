@@ -18,7 +18,8 @@
     "atom-package-deps": "^4.6.0"
   },
   "package-deps": [
-    "intentions"
+    "intentions",
+    "file-icons"
   ],
   "providedServices": {
     "intentions:list": {
