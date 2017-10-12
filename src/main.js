@@ -2,7 +2,7 @@
 
 import { CompositeDisposable } from 'atom';
 import { firstHandlebarsComponentInLine } from './editor-utilities';
-import { getPossibleIntentions } from './helpers';
+import { getIntentions } from './helpers';
 import {
   openComponent,
   toggleBetweenTestAndTarget,
@@ -55,7 +55,7 @@ export default {
     return {
       grammarScopes: ['text.html.handlebars'],
       getIntentions: ({ textEditor, bufferPosition }) => {
-        return getPossibleIntentions(textEditor, bufferPosition);
+        return getIntentions(textEditor, bufferPosition);
       }
     }
   }
