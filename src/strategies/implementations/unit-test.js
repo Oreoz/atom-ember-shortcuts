@@ -5,7 +5,7 @@ const fs = require('fs');
 
 import NavigationStrategy from '../abstractions/navigation';
 
-class ModelNavigationStrategy extends NavigationStrategy {
+class UnitTestNavigationStrategy extends NavigationStrategy {
   getDestinations(location) {
     this.destinations.push({
       path: path.join(location.project, 'tests', 'unit', location.namespace, location.optDirectories, `${location.file}-test.js`),
@@ -17,4 +17,4 @@ class ModelNavigationStrategy extends NavigationStrategy {
   }
 }
 
-export default ModelNavigationStrategy;
+export default UnitTestNavigationStrategy;
