@@ -3,6 +3,19 @@
 const path = require('path');
 const fs = require('fs');
 
+export function getEmberPath(textEditor) {
+  let currentFilePath = textEditor.buffer.file.path;
+  let matches = /.*[\/\\](app|addon)[\/\\]/.exec(currentFilePath);
+  let path = matches ? matches[0] : '';
+
+  if (!path) {
+    console.log('[INFO] Ember Shortcuts: Currently not located in an Ember application.');
+    return null;
+  }
+
+  return path;
+}
+
 export function getIntentions(textEditor, bufferPosition) {
   let intentions = [];
 

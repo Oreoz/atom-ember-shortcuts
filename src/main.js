@@ -1,8 +1,10 @@
 'use babel';
 
 import { CompositeDisposable } from 'atom';
+import { getGlobalNavigationIntentions } from './intentions';
 import { firstHandlebarsComponentInLine } from './editor-utilities';
 import { getIntentions } from './helpers';
+import { getPossibleDestinations } from './helpers/editor';
 import {
   openComponent,
   toggleBetweenTestAndTarget,
@@ -52,12 +54,20 @@ export default {
   },
 
   provideIntentions() {
-    return {
-      grammarScopes: ['text.html.handlebars'],
-      getIntentions: ({ textEditor, bufferPosition }) => {
-        return getIntentions(textEditor, bufferPosition);
+    return [
+      {
+        grammarScopes: ['text.html.handlebars'],
+        getIntentions: ({ textEditor, bufferPosition }) => {
+          return getIntentions(textEditor, bufferPosition);
+        }
+      },
+      {
+        grammarScopes: ['*'],
+        getIntentions: ({ textEditor, bufferPosition }) => {
+          return getGlobalNavigationIntentions(textEditor, bufferPosition);
+        }
       }
-    }
+    ];
   }
 
 };
