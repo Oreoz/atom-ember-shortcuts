@@ -6,6 +6,8 @@ import ControllerNavigationStrategy from '../strategies/implementations/controll
 import ComponentNavigationStrategy from '../strategies/implementations/component';
 import RouteNavigationStrategy from '../strategies/implementations/route';
 import UnitTestedNavigationStrategy from '../strategies/implementations/unit-tested';
+import UnitTestNavigationStrategy from '../strategies/implementations/unit-test';
+import IntegrationTestNavigationStrategy from '../strategies/implementations/integration-test';
 
 const path = require('path');
 const fs = require('fs');
@@ -27,6 +29,14 @@ const EditorHelpers = {
 
     if (location.namespace === 'components') {
       strategies.push(new ComponentNavigationStrategy(location));
+    }
+
+    if (location.namespace === 'unit') {
+      strategies.push(new UnitTestNavigationStrategy(location));
+    }
+
+    if (location.namespace === 'integration') {
+      strategies.push(new IntegrationTestNavigationStrategy(location));
     }
 
     if (
