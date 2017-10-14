@@ -6,21 +6,21 @@ const fs = require('fs');
 import NavigationStrategy from '../abstractions/navigation';
 
 class ComponentNavigationStrategy extends NavigationStrategy {
-  getDestinations(location) {
+  execute() {
     this.destinations.push(...[
       {
-        path: path.join(location.project, location.parent, 'templates', 'components', location.optDirectories, `${location.file}.hbs`),
+        path: path.join(this.location.project, this.location.parent, 'templates', 'components', this.location.optDirectories, `${this.location.file}.hbs`),
         icon: 'javascript',
         namespace: 'templates'
       },
       {
-        path: path.join(location.project, 'tests', 'integration', location.namespace, location.optDirectories, `${location.file}-test.js`),
+        path: path.join(this.location.project, 'tests', 'integration', this.location.namespace, this.location.optDirectories, `${this.location.file}-test.js`),
         icon: 'javascript-test',
         namespace: 'tests'
       }
     ]);
 
-    return this.destinations.filter(destination => fs.existsSync(destination.path));
+    return super.execute();
   }
 }
 

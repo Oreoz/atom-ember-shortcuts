@@ -5,7 +5,7 @@ import PathHelpers from './path';
 import ControllerNavigationStrategy from '../strategies/implementations/controller';
 import ComponentNavigationStrategy from '../strategies/implementations/component';
 import RouteNavigationStrategy from '../strategies/implementations/route';
-import UnitTestNavigationStrategy from '../strategies/implementations/unit-test';
+import UnitTestedNavigationStrategy from '../strategies/implementations/unit-tested';
 
 const path = require('path');
 const fs = require('fs');
@@ -13,31 +13,38 @@ const fs = require('fs');
 const EditorHelpers = {
 
   getPossibleDestinations(textEditor) {
-    let strategy = null;
+    let strategies = [];
 
     let location = PathHelpers.breakdownEmberPath(textEditor.buffer.file.path);
 
     if (location.namespace === 'controllers') {
-      strategy = new ControllerNavigationStrategy();
-    } else if (location.namespace === 'routes') {
-      strategy = new RouteNavigationStrategy();
-    } else if (
+      strategies.push(new ControllerNavigationStrategy(location));
+    }
+
+    if (location.namespace === 'routes') {
+      strategies.push(new RouteNavigationStrategy(location));
+    }
+
+    if (location.namespace === 'components') {
+      strategies.push(new ComponentNavigationStrategy(location));
+    }
+
+    if (
       location.namespace === 'adapters' ||
+      location.namespace === 'controllers' ||
       location.namespace === 'helpers' ||
       location.namespace === 'initializers' ||
       location.namespace === 'models' ||
+      location.namespace === 'routes' ||
       location.namespace === 'serializers' ||
       location.namespace === 'services' ||
       location.namespace === 'transforms'
     ) {
-      strategy = new UnitTestNavigationStrategy();
-    } else if (location.namespace === 'components') {
-      strategy = new ComponentNavigationStrategy();
+      strategies.push(new UnitTestedNavigationStrategy(location));
     }
 
-    if (!strategy) return [];
+    return [].concat.apply([], strategies.map(strategy => strategy.execute()));
 
-    return strategy.getDestinations(location);
   }
 
 };

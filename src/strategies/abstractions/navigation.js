@@ -1,12 +1,15 @@
 'use babel';
 
+const fs = require('fs');
+
 class NavigationStrategy {
-  constructor() {
+  constructor(location) {
     this.destinations = [];
+    this.location = location;
   }
 
-  getDestinations() {
-    return this.destinations;
+  execute() {
+    return this.destinations.filter(destination => fs.existsSync(destination.path));
   }
 }
 

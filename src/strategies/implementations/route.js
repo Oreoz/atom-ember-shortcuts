@@ -6,31 +6,26 @@ const fs = require('fs');
 import NavigationStrategy from '../abstractions/navigation';
 
 class RouteNavigationStrategy extends NavigationStrategy {
-  getDestinations(location) {
+  execute() {
     this.destinations.push(...[
       {
-        path: path.join(location.project, location.parent, 'templates', location.optDirectories, `${location.file}.hbs`),
+        path: path.join(this.location.project, this.location.parent, 'templates', this.location.optDirectories, `${this.location.file}.hbs`),
         icon: 'handlebars',
         namespace: 'templates'
       },
       {
-        path: path.join(location.project, location.parent, 'controllers', location.optDirectories, `${location.file}.js`),
+        path: path.join(this.location.project, this.location.parent, 'controllers', this.location.optDirectories, `${this.location.file}.js`),
         icon: 'javascript',
         namespace: 'controllers'
       },
       {
-        path: path.join(location.project, 'tests', 'unit', location.namespace, location.optDirectories, `${location.file}-test.js`),
-        icon: 'javascript-test',
-        namespace: 'tests'
-      },
-      {
-        path: path.join(location.project, location.parent, 'router.js'),
+        path: path.join(this.location.project, this.location.parent, 'router.js'),
         icon: 'javascript',
         namespace: 'router'
       }
     ]);
 
-    return this.destinations.filter(destination => fs.existsSync(destination.path));
+    return super.execute();
   }
 }
 
