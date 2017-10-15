@@ -28,3 +28,8 @@ components via either the opening or closing declaration
 ## 1.2.1 - Complex Components
 :wrench:
 * TWEAK: Components that are placed in custom folders within the `app/components` directory can now be navigated to using the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>ENTER</kbd> hotkey.
+
+## 2.0.0 - Intentions
+:tada:
+* NEW: It is now possible to use [intentions](https://github.com/steelbrain/intentions) in order to
+navigate within your Ember application.

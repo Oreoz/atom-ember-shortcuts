@@ -14,5 +14,18 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "atom-package-deps": "^4.6.0"
+  },
+  "package-deps": [
+    "intentions",
+    "file-icons"
+  ],
+  "providedServices": {
+    "intentions:list": {
+      "versions": {
+        "1.0.0": "provideIntentions"
+      }
+    }
+  }
 }
