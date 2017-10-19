@@ -6,7 +6,7 @@ const path = require('path');
 let fileUtilities = {
 
   _breakdownEmberPath(filePath) {
-    let pattern = /^(.*)\\(app|addon|tests)\\([a-z-]+)\\.*?(components)?(.*?)([a-z-]*)[.]([a-z]*)$/;
+    let pattern = /^(.*)\\(app|addon|tests)\\([a-z-]+)\\.*?(components)?(.*?)([a-z0-9-]*)[.]([a-z]*)$/;
     let matches = pattern.exec(filePath);
 
     if (matches) {
