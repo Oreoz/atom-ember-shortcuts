@@ -39,22 +39,9 @@ const EditorHelpers = {
       strategies.push(new IntegrationTestNavigationStrategy(location));
     }
 
-    if (
-      location.namespace === 'adapters' ||
-      location.namespace === 'controllers' ||
-      location.namespace === 'helpers' ||
-      location.namespace === 'initializers' ||
-      location.namespace === 'models' ||
-      location.namespace === 'routes' ||
-      location.namespace === 'serializers' ||
-      location.namespace === 'services' ||
-      location.namespace === 'transforms'
-    ) {
-      strategies.push(new UnitTestedNavigationStrategy(location));
-    }
+    strategies.push(new UnitTestedNavigationStrategy(location));
 
     return [].concat.apply([], strategies.map(strategy => strategy.execute()));
-
   }
 
 };
