@@ -39,17 +39,7 @@ const EditorHelpers = {
       strategies.push(new IntegrationTestNavigationStrategy(location));
     }
 
-    if (
-      location.namespace === 'adapters' ||
-      location.namespace === 'controllers' ||
-      location.namespace === 'helpers' ||
-      location.namespace === 'initializers' ||
-      location.namespace === 'models' ||
-      location.namespace === 'routes' ||
-      location.namespace === 'serializers' ||
-      location.namespace === 'services' ||
-      location.namespace === 'transforms'
-    ) {
+    if (location.parent === 'app' || location.parent === 'addon') {
       strategies.push(new UnitTestedNavigationStrategy(location));
     }
 
