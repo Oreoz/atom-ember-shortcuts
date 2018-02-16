@@ -1,7 +1,7 @@
 {
   "name": "ember-shortcuts",
   "main": "./src/main",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Ember.js shortcuts for Atom!",
   "repository": "https://github.com/Oreoz/atom-ember-shortcuts",
   "license": "MIT",
