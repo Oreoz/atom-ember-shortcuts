@@ -33,3 +33,7 @@ components via either the opening or closing declaration
 :tada:
 * NEW: It is now possible to use [intentions](https://github.com/steelbrain/intentions) in order to
 navigate within your Ember application.
+
+## 2.0.2 - Quality of Life
+:wrench:
+* TWEAK: The unit tested navigation will now be applied more broadly -- it'll look for a unit test whenever you're invoking intentions if you're located within the `app` or `addon` directory of an Ember project.
