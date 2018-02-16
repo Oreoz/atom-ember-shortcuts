@@ -29,17 +29,17 @@ export function getIntentions(textEditor, bufferPosition) {
   }
 
   let activeEditorRow = textEditor.buffer.lineForRow(bufferPosition.row);
-  let componentMatches = /{{[#\/]?([a-z-\/]+)/.exec(activeEditorRow);
+  let componentMatches = /{{[#\/]?([a-z0-9-\/]+)/.exec(activeEditorRow);
   let componentName = componentMatches ? componentMatches[1] : '';
 
-  let contextualMatches = /{{([a-z-]*)\.([a-z-]+)/.exec(activeEditorRow);
+  let contextualMatches = /{{([a-z0-9-]*)\.([a-z0-9-]+)/.exec(activeEditorRow);
   if (contextualMatches) {
-    let regex = new RegExp(`{{#([a-z-\\/]*)(?=[^\\}]*?\\|${contextualMatches[1]}\\|)`);
+    let regex = new RegExp(`{{#([a-z0-9-\\/]*)(?=[^\\}]*?\\|${contextualMatches[1]}\\|)`);
     let occurences = textEditor.buffer.findAllSync(regex);
 
     if (occurences.length > 0) {
       let parentDeclaration = textEditor.buffer.lineForRow(occurences[0].start.row);
-      let parentMatches = /{{[#\/]?([a-z-\/]+)/.exec(parentDeclaration);
+      let parentMatches = /{{[#\/]?([a-z0-9-\/]+)/.exec(parentDeclaration);
       let parentComponentName = parentMatches ? parentMatches[1] : '';
 
       let parentTemplate = path.join(applicationPath, 'templates', 'components', `${parentComponentName}.hbs`);
@@ -47,7 +47,7 @@ export function getIntentions(textEditor, bufferPosition) {
       let data = fs.readFileSync(parentTemplate, { encoding: 'utf-8' });
 
       if (data) {
-        let yieldedRegex = new RegExp(`${contextualMatches[2]}\\s*=\\s*\\(component\\s*'([a-z-\\/]*)'`);
+        let yieldedRegex = new RegExp(`${contextualMatches[2]}\\s*=\\s*\\(component\\s*'([a-z0-9-\\/]*)'`);
         let yieldedMatches = yieldedRegex.exec(data);
         let yieldedComponentName = yieldedMatches ? yieldedMatches[1] : '';
 

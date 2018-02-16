@@ -37,3 +37,6 @@ navigate within your Ember application.
 ## 2.0.2 - Quality of Life
 :wrench:
 * TWEAK: The unit tested navigation will now be applied more broadly -- it'll look for a unit test whenever you're invoking intentions if you're located within the `app` or `addon` directory of an Ember project.
+
+:bug:
+* BUGFIX: Components that have numeric values in their names should now properly be recognized.
